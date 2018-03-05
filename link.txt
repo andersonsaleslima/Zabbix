@@ -1,0 +1,18 @@
+# Instalação
+http://blog.remontti.com.br/2126
+
+# Instalação Zabbix Proxy
+*http://www.routerperformance.net/howtos/zabbix/installing-a-zabbix-proxy-with-debian-8/
+*http://meinit.nl/add-zabbix-proxy-existing-zabbix-server
+http://zabbixbrasil.org/files/Instalacao-Zabbix-Proxy-MYSQL_Debian7.pdf
+https://www.zabbix.com/documentation/3.0/manual/installation/install_from_packages/proxy_installation
+
+# Instalação Zabbix-server CentOS 7
+http://mmoraessolucoes.com.br/2017/10/07/instalacao-zabbix-server-no-cent-os-7-comentada/
+
+# Configuração agente zabbix Ubuntu:
+https://brasilcloud.com.br/tutoriais/como-instalar-o-agente-zabbix-zabbix-agent-no-ubuntu-16-0414-04-lts-e-debian-87/
+
+# Triggeer
+https://www.zabbix.com/documentation/3.0/manual/config/triggers/expression
+
