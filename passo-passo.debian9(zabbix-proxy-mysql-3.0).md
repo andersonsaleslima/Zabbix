@@ -1,4 +1,4 @@
-Cenário
+CenÃ¡rio
 ==============================================================================
 
 Zabbix Server\
@@ -7,13 +7,13 @@ Zabbix Agent
 Debian 9 - Zabbix-Server-MySQL 3.0
 ==============================================================================
 
-## Instalação
+## InstalaÃ§Ã£o
 
 ### 1- Atualizar sistema
 
 	apt-get update
 
-### 2- instalar ambiente de LAMP, pré-requisito para funcionamento do zabbix.
+### 2- instalar ambiente de LAMP, prÃ©-requisito para funcionamento do zabbix.
 
 #### 2.1- debian 9
 
@@ -23,11 +23,11 @@ Debian 9 - Zabbix-Server-MySQL 3.0
 		apt-get install -y php7.0-mysql
 
 
-### 3- Instalação zabbix:
+### 3- InstalaÃ§Ã£o zabbix:
 
 		apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-agent
 
-### 4- criar base dados chamado zabbix e usuário zabbix.
+### 4- criar base dados chamado zabbix e usuÃ¡rio zabbix.
 
 	mysql -u root -p
 
@@ -41,7 +41,7 @@ Debian 9 - Zabbix-Server-MySQL 3.0
 	zcat /usr/share/zabbix-server-mysql/images.sql.gz | mysql -uzabbix -p zabbix
 	zcat /usr/share/zabbix-server-mysql/data.sql.gz | mysql -uzabbix -p zabbix
 
-### 6- Editar arquivo "/etc/zabbix/zabbix_server.conf" procurando as devidas 
+### 6- Editar arquivo "/etc/zabbix/zabbix_server.conf" procurando as devidas \
 linhas exibidas abaixo
 
 	vi /etc/zabbix/zabbix_server.conf
@@ -55,7 +55,7 @@ linhas exibidas abaixo
 		DBPassword=SENHA-USUARIO-ZABBIX
 		#...
 
-#### 7- Criar a configuração do "Zabbix" no "Apache2"
+#### 7- Criar a configuraÃ§Ã£o do "Zabbix" no "Apache2"
 
 	vi /etc/apache2/conf-enabled/zabbix.conf
 
@@ -96,7 +96,7 @@ linhas exibidas abaixo
 	/etc/init.d/zabbix-server restart
 	/etc/init.d/zabbix-agent restart
 
-##### 11- Criar arquivo que receberá as configurações web.s
+##### 11- Criar arquivo que receberÃ¡ as configuraÃ§Ãµes web.s
 
 	touch /etc/zabbix/zabbix.conf.php
 	chown www-data /etc/zabbix/zabbix.conf.php
@@ -107,29 +107,29 @@ linhas exibidas abaixo
 
 ### Acessando Front-End
 
-#### 1- Acessar página fdo "Zabbix" em um browser para finalizar os procedimentos de 
-configuração de instalação
+#### 1- Acessar pÃ¡gina fdo "Zabbix" em um browser para finalizar os procedimentos de 
+configuraÃ§Ã£o de instalaÃ§Ã£o
 
 	URL:http://192.168.56.101/zabbix
 
-#### 2- Digitar as informações necessárias nos procedimentos. Informe a senha do banco
+#### 2- Digitar as informaÃ§Ãµes necessÃ¡rias nos procedimentos. Informe a senha do banco
 "MySQL" quando solicitado.
 
-#### 3- Na página de login do zabbix forneça as seguintes credenciais
+#### 3- Na pÃ¡gina de login do zabbix forneÃ§a as seguintes credenciais
 
 	login: Admin
 	senha: zabbix
 
 ## Adcionando e configurando Host
 
-### 1- Acessar "Configuraçõe>Host" e clicar em "Adicionar Host"
+### 1- Acessar "ConfiguraÃ§Ãµe>Host" e clicar em "Adicionar Host"
 
-### 2- Preecha os campos de criação da aba "Host".
+### 2- Preecha os campos de criaÃ§Ã£o da aba "Host".
 
 	> Nome: zabbix_agent_1
 	> Grupos: Linux servers;
 	> Interface do Agente
-		- Endereço IP: 10.10.10.11
+		- EndereÃ§o IP: 10.10.10.11
 		- Porta: 10050
 
 	#Obs.: "Nome" deve ser o mesmo configurado no arquivo 
@@ -137,9 +137,9 @@ configuração de instalação
 
 ## Configurando Zabbix proxy
 
-### 1- Acessar "Administração>Proxy" e clicar em Adicionar Host"
+### 1- Acessar "AdministraÃ§Ã£o>Proxy" e clicar em Adicionar Host"
 
-### 2- Preencha os campos de criação do host na aba "Proxy" e depois clique em 
+### 2- Preencha os campos de criaÃ§Ã£o do host na aba "Proxy" e depois clique em 
 "Adicionar".
 
 	> Nome do Proxy: zabbix_proxy
@@ -149,15 +149,15 @@ configuração de instalação
 ### 2.1- Obs.: "Nome do Proxy" deve ser o mesmo configurado no arquivo 
 "/etc/zabbix/zabbix_proxy.conf".
 
-### 3- Adicone o Zabbix-Proxy entre os Host à serem monitorados. Acesse 
-"Configuraçõe>Host" e clique em "Adicionar Host"
+### 3- Adicone o Zabbix-Proxy entre os Host Ã  serem monitorados. Acesse 
+"ConfiguraÃ§Ãµe>Host" e clique em "Adicionar Host"
 
-### 4- Preecha os campos de criação da aba "Host".
+### 4- Preecha os campos de criaÃ§Ã£o da aba "Host".
 
 		> Nome: zabbix_agent_1
 		> Grupos: Linux servers;
 		> Interface do Agente
-			- Endereço IP: <10.10.10.4>
+			- EndereÃ§o IP: <10.10.10.4>
 			- Porta: 10050
 
 	# Obs.: "Nome" deve ser o mesmo configurado no arquivo 
@@ -166,7 +166,7 @@ configuração de instalação
 Debian 9 - Zabbix-Proxy-MySQL 3.0
 ==============================================================================
 
-## Instalação
+## InstalaÃ§Ã£o
 
 ### 1- Atualizar sistema
 
@@ -174,11 +174,11 @@ Debian 9 - Zabbix-Proxy-MySQL 3.0
 
 	apt-get update
 
-### 2- Instalar zabbix apartir do repositório Debian:
+### 2- Instalar zabbix apartir do repositÃ³rio Debian:
 
 	apt install -y zabbix-proxy-mysql zabbix-agent
 
-### 3- criar base de dados chamado zabbix e usuário zabbix no "MariaDB"
+### 3- criar base de dados chamado zabbix e usuÃ¡rio zabbix no "MariaDB"
 
 	mariadb
 
@@ -237,7 +237,7 @@ Debian 9 - Zabbix-Agent 3.0
 
 	apt-get -y install zabbix-agent
 
-#### 2- Editar arquivo de configuração do zabbix "/etc/zabbix/zabbix_agentd.conf"
+#### 2- Editar arquivo de configuraÃ§Ã£o do zabbix "/etc/zabbix/zabbix_agentd.conf"
 
 		vi /etc/zabbix/zabbix_agentd.conf
 
