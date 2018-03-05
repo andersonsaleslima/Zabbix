@@ -83,27 +83,27 @@ exibidas abaixo
 		    </files>
 		</Directory>	
 
-9- Reiniciar "Apache2"
+8- Reiniciar "Apache2"
 
 	/etc/init.d/apache2 restart
 
-10- Habiliar e inicializar o "Zabbix Server" e o "Agente"
+9- Habiliar e inicializar o "Zabbix Server" e o "Agente"
 
 	systemctl enable zabbix-server
 	systemctl enable zabbix-agent
 	/etc/init.d/zabbix-server restart
 	/etc/init.d/zabbix-agent restart
 
-11- Criar arquivo que receberá as configurações web.s
+10- Criar arquivo que receberá as configurações web.s
 
 	touch /etc/zabbix/zabbix.conf.php
 	chown www-data /etc/zabbix/zabbix.conf.php
 
-12- Verifcar as portas abertas no servidor
+11- Verifcar as portas abertas no servidor
 
 	netstat -ntpl
 
-### Acessando Front-End
+## Acessando Front-End
 
 1- Acessar página fdo "Zabbix" em um browser para finalizar os procedimentos 
 de configuração de instalação
