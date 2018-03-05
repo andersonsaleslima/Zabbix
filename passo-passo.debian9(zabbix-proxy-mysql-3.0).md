@@ -41,8 +41,8 @@ Debian 9 - Zabbix-Server-MySQL 3.0
 	zcat /usr/share/zabbix-server-mysql/images.sql.gz | mysql -uzabbix -p zabbix
 	zcat /usr/share/zabbix-server-mysql/data.sql.gz | mysql -uzabbix -p zabbix
 
-### 6- Editar arquivo "/etc/zabbix/zabbix_server.conf" procurando as devidas \
-linhas exibidas abaixo
+### 6- Editar arquivo "/etc/zabbix/zabbix_server.conf" procurando as devidas 
+### linhas exibidas abaixo
 
 	vi /etc/zabbix/zabbix_server.conf
 
